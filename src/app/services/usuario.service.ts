@@ -8,13 +8,13 @@ export class UsuarioService {
   //variables necesarias para el trabajo del CRUD:
   usuarios: any[] = [
     {
-      rut: '20.793.487-9',
-      nom_completo: 'Diego Marquez',
+      rut: '22.222.222-2',
+      nom_completo: 'alumno',
       fecha_nac: '2002-11-10',
       semestre: 4,
       password: 'alumno123123',
       tipo_usuario: 'alumno',
-      email: 'di.marquez@duoc.cl'
+      email: 'alumno@duocuc.cl'
     },
     {
       rut: '00.000.000-0',
@@ -23,7 +23,7 @@ export class UsuarioService {
       semestre: 4,
       password: 'admin123123',
       tipo_usuario: 'admin',
-      email: 'alumno@duocuc.cl'
+      email: 'alumno@duoc.cl'
     },
     {
       rut: '11.111.111-1',

@@ -9,14 +9,19 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class HomePage implements OnInit{
 
+  private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   //VAMOS A CREAR EL GRUPO DEL FORMULARIO:
   alumno = new FormGroup({
+    //Validador de rut TIENE QUE SER UNO EN SERIO SIPO
     rut : new FormControl('', [Validators.required, Validators.pattern('[0-9]{1,2}.[0-9]{3}.[0-9]{3}-[0-9kK]{1}')]),
     nom_completo: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    //validador de fecha TIENE QUE SER IGUAL O MAYOR A 17
     fecha_nac: new FormControl('', Validators.required),
     semestre: new FormControl('', [Validators.required, Validators.min(1), Validators.max(8)]),
     password: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(18)]),
-    tipo_usuario: new FormControl('alumno')
+    tipo_usuario: new FormControl('alumno'),
+    //Validador de email SIN LA WEA DE DUOC
+    email: new FormControl('', [Validators.required, Validators.minLength(5), Validators.pattern(this.emailPattern)])
   });
 
   //VAMOS A CREAR UNA VARIABLE PARA OBTENER LA LISTA DE USUARIOS DEL SERVICIO DE USUARIOS:
