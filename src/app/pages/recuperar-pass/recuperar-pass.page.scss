@@ -1,0 +1,43 @@
+ion-card {
+
+    .fondo-login {
+        width: 40%;
+    }
+
+    ion-card-header {
+        ion-card-subtitle {
+            font-size: x-large;
+
+        }
+
+        ion-card-title {
+            font-size: x-large;
+
+        }
+    }
+
+    ion-item {
+        --background: none;
+
+        ion-label {
+            font-size: large;
+            font-weight: bold;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        font-size: large;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .fondo {
+        ion-card {
+            width: 80vw;
+        }
+    }
+}

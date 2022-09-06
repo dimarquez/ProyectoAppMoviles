@@ -40,7 +40,7 @@ export class LoginPage implements OnInit {
       this.tostadaError();
     }
   }
-
+  
   //toast
   async tostadaError() {
     const toast = await this.toastController.create({
